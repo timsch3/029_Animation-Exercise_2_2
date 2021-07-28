@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+    animation: moveBall 4s infinite;
+}
+div:hover {
+    animation-play-state: paused;
+}
+
+@keyframes moveBall {
+    0% {
+        transform: translate(0vw, 0vh);
+        background-color: red;
+    }
+    25% {
+        transform: translate(calc(100vw - 200px), 0vh);
+        background-color: blue;
+    }
+    50% {
+        transform: translate(calc(100vw - 200px), calc(100vh - 200px));
+        background-color: green;
+    }
+    75% {
+        transform: translate(0vw, calc(100vh - 200px));
+        background-color: yellow;
+    }
+}
